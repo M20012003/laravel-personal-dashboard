@@ -1,0 +1,133 @@
+body {
+    margin: 0;
+    background-color: #fff5f7;
+    color: #3d2b30;
+    font_family: Arial, sans-serif;
+
+}
+.hero {
+    max-width: 800px;
+    margin: 80px auto;
+    padding: 60px;
+    text-align: center;
+}
+
+.hero-lable {
+    font-size: 14px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    color: #d46a92;
+}
+.hero h1 {
+    font-size: 48px;
+    margin: 20px 0;
+}
+.hero-description {
+    max-width: 550px;
+    margin: 0 auto 30px;
+    font-size: 18px;
+    line-height: 1.7;
+}
+.hero-button {
+    display: inline-block;
+    padding: 14px 25px;
+    background-color: #e98aa9;
+    color: white;
+    text-decoration: none;
+    border-radius: 10px;
+}
+.header {
+    background-color: white;
+    padding: 20px 0;
+}
+.navbar {
+    max-width: 1000px;
+    margin: auto;
+    padding: 0 30px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.logo {
+    color: #d46a92;
+    font-size: 22px;
+    font-weight: bold;
+    text-decoration: none;
+}
+.nav-links {
+    display: flex;
+    gap: 25px;
+}
+.nav-links a {
+    color: #3d2b30;
+    text-decoration: none;
+    font-size: 16px;
+}
+.nav-links a:hover {
+    color: #d46a92;
+}
+.task-page {
+    max-width: 850px;
+    margin: 70px auto;
+    padding: 40px;
+}
+.task-page .page-label {
+    color: #d46a92;
+    font-size: 13px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    text-align: center;
+}
+.task-list {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+.task-card {
+    background-color: white;
+    padding: 20px 25px;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+    border-left: 5px solid #d46a92;
+    transition: 0.3s;
+}
+.task-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.12);
+}
+.task-card h2 {
+    font-size: 20px;
+    margin: 0;
+}
+.total-tasks {
+    text-align: center;
+    margin-top: 35px;
+    font-size: 18px;
+    font-weight: bold;
+    color: #d46a92;
+}
+.status {
+    display: inline-block;
+    padding: 7px 12px;
+    border-radius: 20px;
+    font-size: 14px;
+    font-weight: bold;
+}
+.completed {
+    background-color: #dff7e8;
+    color: #2f8f5b;
+}
+.pending {
+    background-color: #fff0d6;
+    color: #c47a00;
+}
+.task-content {
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    gap: 20px;
+}
