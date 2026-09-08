@@ -36,6 +36,25 @@ body {
     text-decoration: none;
     border-radius: 10px;
 }
+.user-name {
+    color: #3d2b30;
+    max-width: 550px;
+    margin: 0 auto 30px;
+    font-size: 18px;
+    line-height: 1.7;
+    font-weight: bold;
+
+
+}
+.country-name {
+    color: #3d2b30;
+    max-width: 550px;
+    margin: 0 auto 30px;
+    font-size: 18px;
+    line-height: 1.7;
+    font-weight: bold;
+
+}
 .header {
     background-color: white;
     padding: 20px 0;

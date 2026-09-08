@@ -7,6 +7,12 @@
 <h1>
     Welcome to my World 🌸
 </h1>
+ <p class="user-name">
+    Hi Dear {{ $name }} 💞
+ </p>
+ <p class="country-name">
+    {{ $country }} is really beautiful.
+ </p>
 <p class="hero-description">
     This is my personal space where I organize my goals,
     tasks, and learning journey.
