@@ -2,9 +2,13 @@ body {
     margin: 0;
     background-color: #fff5f7;
     color: #3d2b30;
-    font_family: Arial, sans-serif;
-
+    font-family: Arial, sans-serif;
 }
+
+/* =========================
+   HOME PAGE
+========================= */
+
 .hero {
     max-width: 800px;
     margin: 80px auto;
@@ -18,16 +22,19 @@ body {
     letter-spacing: 2px;
     color: #d46a92;
 }
+
 .hero h1 {
     font-size: 48px;
     margin: 20px 0;
 }
+
 .hero-description {
     max-width: 550px;
     margin: 0 auto 30px;
     font-size: 18px;
     line-height: 1.7;
 }
+
 .hero-button {
     display: inline-block;
     padding: 14px 25px;
@@ -36,6 +43,7 @@ body {
     text-decoration: none;
     border-radius: 10px;
 }
+
 .user-name {
     color: #3d2b30;
     max-width: 550px;
@@ -43,9 +51,8 @@ body {
     font-size: 18px;
     line-height: 1.7;
     font-weight: bold;
-
-
 }
+
 .country-name {
     color: #3d2b30;
     max-width: 550px;
@@ -53,12 +60,18 @@ body {
     font-size: 18px;
     line-height: 1.7;
     font-weight: bold;
-
 }
+
+
+/* =========================
+   HEADER / NAVBAR
+========================= */
+
 .header {
     background-color: white;
     padding: 20px 0;
 }
+
 .navbar {
     max-width: 1000px;
     margin: auto;
@@ -68,64 +81,147 @@ body {
     justify-content: space-between;
     align-items: center;
 }
+
 .logo {
     color: #d46a92;
     font-size: 22px;
     font-weight: bold;
     text-decoration: none;
 }
+
 .nav-links {
     display: flex;
     gap: 25px;
 }
+
 .nav-links a {
     color: #3d2b30;
     text-decoration: none;
     font-size: 16px;
 }
+
 .nav-links a:hover {
     color: #d46a92;
 }
-.task-page {
+
+
+/* =========================
+   TASKS PAGE
+========================= */
+
+.tasks-page {
     max-width: 850px;
     margin: 70px auto;
     padding: 40px;
 }
-.task-page .page-label {
+
+.tasks-page .page-label {
     color: #d46a92;
     font-size: 13px;
     font-weight: bold;
     letter-spacing: 2px;
     text-align: center;
 }
-.task-list {
+
+.tasks-page h1 {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.page-description {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+
+/* =========================
+   ADD TASK FORM
+========================= */
+
+.tasks-page > form {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 35px;
+}
+
+.tasks-page > form input {
+    flex: 1;
+    padding: 12px 15px;
+    border: 1px solid #f0b6c9;
+    border-radius: 10px;
+    font-size: 16px;
+    outline: none;
+}
+
+.tasks-page > form input:focus {
+    border-color: #d46a92;
+}
+
+.tasks-page > form button {
+    padding: 12px 20px;
+    border: none;
+    border-radius: 10px;
+    background-color: #e98aa9;
+    color: white;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.tasks-page > form button:hover {
+    background-color: #d46a92;
+}
+
+
+/* =========================
+   TASK LIST
+========================= */
+
+.tasks-list {
     display: flex;
     flex-direction: column;
     gap: 15px;
 }
+
 .task-card {
     background-color: white;
     padding: 20px 25px;
     border-radius: 15px;
+
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+
     border-left: 5px solid #d46a92;
+
     transition: 0.3s;
 }
+
 .task-card:hover {
     transform: translateY(-4px);
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.12);
 }
+
 .task-card h2 {
     font-size: 20px;
     margin: 0;
 }
-.total-tasks {
-    text-align: center;
-    margin-top: 35px;
-    font-size: 18px;
-    font-weight: bold;
-    color: #d46a92;
+
+
+/* =========================
+   TASK CONTENT
+========================= */
+
+.task-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
 }
+
+
+/* =========================
+   STATUS
+========================= */
+
 .status {
     display: inline-block;
     padding: 7px 12px;
@@ -133,20 +229,56 @@ body {
     font-size: 14px;
     font-weight: bold;
 }
+
 .completed {
     background-color: #dff7e8;
     color: #2f8f5b;
 }
+
 .pending {
     background-color: #fff0d6;
     color: #c47a00;
 }
-.task-content {
-    display: flex;
 
-    justify-content: space-between;
 
-    align-items: center;
+/* =========================
+   COMPLETE BUTTON
+========================= */
 
-    gap: 20px;
+.task-content form {
+    margin: 0;
+}
+
+.task-content button {
+    padding: 8px 15px;
+    border: none;
+    border-radius: 8px;
+
+    background-color: #e98aa9;
+    color: white;
+
+    font-size: 14px;
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+}
+
+.task-content button:hover {
+    background-color: #d46a92;
+    transform: translateY(-1px);
+}
+
+
+/* =========================
+   TOTAL TASKS
+========================= */
+
+.total-tasks {
+    text-align: center;
+    margin-top: 35px;
+    font-size: 18px;
+    font-weight: bold;
+    color: #d46a92;
 }

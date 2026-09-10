@@ -3,53 +3,36 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\Task;
 
 class TaskController extends Controller
 {
     public function index() {
-         $tasks = [
-            [
-                'title' => 'Learn PHP',
-                'completed' => true,
-            ],
-            [
-                'title' => 'Learn Laravel',
-                'completed' => true,
-            ],
-            [
-                'title' => 'go to the gym',
-                'completed' => false,
-            ],
-            [
-                'title' => 'practice CSS',
-                'completed' => false,
-            ],
-        ];
-
-        return view('tasks', [
-            'tasks' => $tasks,
-        ]);
+        
+        $tasks = Task::all();
+        return view('tasks', ['tasks' => $tasks]);
     }
-    public function show($id)  {
-         $tasks = [
-       1 => [
-            'title' => 'Learn PHP',
-            'completed' => true,
-        ],
-       2=> [
-            'title' => 'Learn Laravel',
-            'completed' => true,
-        ],
-       3=> [
-            'title' => 'go to the gym',
-            'completed' => false,
-        ],
-        4=>[
-            'title' => 'practice CSS',
-            'completed' => true,
-        ],
+    public function store(Request $request) {
+        $title = $request->input('title');
+        $task = new Task();
+        $task->title = $title;
+        $task->completed = false;
+        $task->save();
 
-    ];
-    return $tasks[$id]['title'];
+       return redirect('/tasks');
+
+    }
+    public function update($id) {
+        $task = Task::find($id);
+        $task->completed = true;
+        $task->save();
+        return redirect('/tasks');
+
+    }
+    public function destroy($id) {
+        $task = Task::find($id);
+        $task->delete();
+        return redirect('/tasks');
     }
 }
+    
