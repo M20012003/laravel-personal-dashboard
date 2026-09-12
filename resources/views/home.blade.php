@@ -17,6 +17,21 @@
     This is my personal space where I organize my goals,
     tasks, and learning journey.
 </p>
+@if (Auth::check())
+  <p>
+    You're logged in!
+  </p>
+  @else
+  <a href="/login">
+    login
+  </a>
+  <a href="/register">
+    Register 
+  </a>
+  @endif
+  
+
+
 
 <a href="/tasks" class="hero-button">
     View My Tasks →
